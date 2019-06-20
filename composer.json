@@ -1,0 +1,44 @@
+{
+    "name": "kitteam/tele2-api",
+    "description": "Tele2 ATS API client for Laravel",
+    "keywords": [
+        "framework",
+        "laravel",
+        "tele2",
+        "ats",
+        "api"
+    ],
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "laravel/framework": "^5.0"
+    },
+    "license": "GPL-3.0",
+    "support": {
+        "issues": "https://github.com/kitteam/tele2-api/issues",
+        "source": "https://github.com/kitteam/tele2-api"
+    },
+    "authors": [
+        {
+            "name": "Anton Popov",
+            "email": "a.popov@kit.team"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tele2Api\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tele2Api\\Providers\\Tele2ServiceProvider"
+            ],
+            "aliases": {
+                "Tele2": "Tele2Api\\Facades\\Tele2"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
