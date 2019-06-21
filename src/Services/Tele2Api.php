@@ -3,7 +3,7 @@
 namespace Tele2Api\Services;
 
 use GuzzleHttp\Client;
-use Tele2gApi\Exceptions\Tele2Exceptions;
+use Tele2Api\Exceptions\Tele2Exceptions;
 
 class Tele2Api
 {
@@ -116,7 +116,7 @@ class Tele2Api
             ->getBody()
             ->getContents();
 
-        if (!$data = json_decode($json, true)) {
+        if (!($data = json_decode($json, true)) && json_last_error()) {
             throw new Tele2Exceptions('JSON decodin error');
         }
 

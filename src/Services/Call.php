@@ -26,7 +26,7 @@ trait Call
      */
     public function getCurrent()
     {
-        return $this->send('call-company');
+        return $this->send('call_company');
     }
 
     /**
