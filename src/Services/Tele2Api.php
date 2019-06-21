@@ -7,9 +7,34 @@ use Tele2gApi\Exceptions\Tele2Exceptions;
 
 class Tele2Api
 {
+    use Call;
+
+    /**
+     * ID клиента (передается каждому клиенту при интеграции)
+     *
+     * @var integer
+     */
     protected $company = '';
+
+    /**
+     * ID региона (передается каждому клиенту при интеграции)
+     *
+     * @var integer
+     */
     protected $region = '';
+
+    /**
+     * Логин администратора АТС (добавляется в разделе «Пользователи АТС»)
+     *
+     * @var string
+     */
     protected $login = '';
+
+    /**
+     * Пароль администратора АТС (добавляется в разделе «Пользователи АТС»)
+     *
+     * @var string
+     */
     protected $password = '';
 
     public function __construct()
