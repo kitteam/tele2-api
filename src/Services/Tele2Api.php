@@ -7,7 +7,7 @@ use Tele2gApi\Exceptions\Tele2Exceptions;
 
 class Tele2Api
 {
-    use Call;
+    use Call, Employee;
 
     /**
      * ID клиента (передается каждому клиенту при интеграции)
